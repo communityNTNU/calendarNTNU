@@ -1,0 +1,6 @@
+timezone: Asia/Taipei
+encoding: utf-8
+title: Calendar NTNU
+url: "calendar.coursentnu.com"
+baseurl: ""
+markdown: kramdown
