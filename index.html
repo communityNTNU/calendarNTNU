@@ -5,9 +5,18 @@ layout: default
   $(document).ready(function() {
     $('#calendar').fullCalendar({
       googleCalendarApiKey: 'AIzaSyDWkltIN-suEnTENnMqg0y40D08rkk6lSk',
-      events: {
-        googleCalendarId: 'sfvm5ge1r803kh7g4gj438e184@group.calendar.google.com'
-      }
+      eventSources: [
+        {
+          googleCalendarId: 'sfvm5ge1r803kh7g4gj438e184@group.calendar.google.com',
+          className: 'school-affairs',
+          color: 'blue'
+        },
+        {
+          googleCalendarId: 'k13fpdmsl2pmclrigapkt1iagk@group.calendar.google.com',
+          className: 'student-events',
+          color: 'yellow'
+        }
+      ]
     });
   });
 </script>
