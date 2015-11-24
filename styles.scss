@@ -1,0 +1,51 @@
+---
+---
+@import "variable";
+
+html, body {
+	margin: 0;
+	padding: 1px;
+}
+
+#calendar {
+	background-color: #fff;
+
+	> .fc-toolbar {
+		padding: 4rem 2rem 2rem;
+		margin: 0;
+		background-color: #F5F5F5;
+		color: #A0A0A0;
+
+		h2 {
+			font-size: 3rem;
+			font-weight: 100;
+		}
+	}
+
+	> .fc-view-container > .fc-view {
+		background-image: url('/images/bg.jpg');
+
+		> table {
+
+			> .fc-body {
+				background-color: rgba(255, 255, 255, 0.75);
+
+				> tr {
+					background-color: #fff;
+				}
+			}
+
+			.fc-day-header.fc-widget-header {
+				padding: .5rem;
+				background-color: #F4F4F4;
+				color: #999;
+			}
+
+			.fc-day-number {
+				padding: .5rem .75rem;
+				font-size: 1.25rem;
+				text-align: left;
+			}
+		}
+	}
+}
