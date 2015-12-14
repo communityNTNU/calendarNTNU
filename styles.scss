@@ -4,47 +4,140 @@
 
 html, body {
 	margin: 0;
-	padding: 1px;
+	padding: 0px;
 }
+
+header {
+	padding: 5px;
+	height: 1rem;
+	background-color: #343434;
+	nav {
+		float: right;
+		ul#navigation {
+			padding: 0;
+			margin: 0;
+
+			li {
+				display: inline-block;
+				a {
+					display: block;
+					min-width: 5.75rem;
+					margin: 0 .5rem;
+					padding-bottom: .25rem;
+					color: #fff;
+					text-align: center;
+					text-decoration: none;
+
+					&:hover {
+						&::before { content: '(';}
+						&::after { content: ')';}
+					}
+				}
+			}
+		}
+	}
+}
+
+footer {
+	padding: .5rem;
+	background-color: #343434;
+	color: #fff;
+	font-weight: 600;
+	text-align: center;
+}
+
 
 #calendar {
 	background-color: #fff;
 
 	> .fc-toolbar {
-		padding: 4rem 2rem 2rem;
+		padding: 2rem;
 		margin: 0;
 		background-color: #F5F5F5;
 		color: #A0A0A0;
 
 		h2 {
+			margin: .5rem;
 			font-size: 3rem;
 			font-weight: 100;
 		}
-	}
+		.fc-right {
+			.fc-button {
+				margin: 1rem .5rem;
+				padding: 0;
+				height: 2.5rem;
+				width: 2.5rem;
+				background-image: none;
+				color: #fff;
+				border: 0;
+				border-radius: 50%;
 
-	> .fc-view-container > .fc-view {
-		background-image: url('/images/bg.jpg');
-
-		> table {
-
-			> .fc-body {
-				background-color: rgba(255, 255, 255, 0.75);
-
-				> tr {
-					background-color: #fff;
+				span {
+					vertical-align: text-bottom;
 				}
 			}
 
-			.fc-day-header.fc-widget-header {
-				padding: .5rem;
-				background-color: #F4F4F4;
-				color: #999;
+			.fc-today-button {
+				width: 5rem;
+				background-color: #F0A000;
+				border-radius: 1rem;
 			}
 
-			.fc-day-number {
-				padding: .5rem .75rem;
-				font-size: 1.25rem;
-				text-align: left;
+			.fc-prev-button {
+				background-color: #E67F97;
+				span {
+					background-color: #E67F97;
+				}
+			}
+
+			.fc-next-button {
+				background-color: #6792CC;
+				span {
+					background-color: #6792CC;
+				}
+
+			}
+		}
+	}
+
+	> .fc-view-container {
+		background-image: url('/images/bg.jpg');
+
+		> .fc-view {
+			padding: 2rem;
+			background-color: rgba(255,255,255, 0.75);
+
+			> table {
+
+				> .fc-body {
+					background-color: rgba(255, 255, 255, 0.75);
+
+					> tr {
+						background-color: #fff;
+
+						.fc-row {
+							.fc-content-skeleton {
+								table {
+									.fc-content {
+										padding: .25rem;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.fc-day-header.fc-widget-header {
+					padding: .5rem;
+					background-color: #F4F4F4;
+					color: #999;
+				}
+
+				.fc-day-number {
+					padding: .5rem .75rem;
+					font-size: 1.25rem;
+					text-align: left;
+				}
 			}
 		}
 	}
