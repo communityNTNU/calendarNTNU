@@ -11,14 +11,51 @@ header {
 	padding: 5px;
 	height: 1rem;
 	background-color: #343434;
+
+  @media #{$rwd-phone} {
+    height: 2rem;
+    padding: 5px 0;
+  }
+
 	nav {
 		float: right;
+		display: none;
+    @media #{$rwd-phone} {
+      display: inline-block;
+      text-align: right;
+      width: 100%;
+    }
+
+    label {
+      display: inline-block;
+      padding: .25rem;
+      height: 1.5rem;
+      svg {
+        height: 1.5rem;
+        vertical-align: top;
+        path {
+          fill: #fff
+        }
+      }
+    }
+
+    input#nav-toggle {
+      display: none;
+    }
+
 		ul#navigation {
 			padding: 0;
 			margin: 0;
+      @media #{$rwd-phone} {
+        display: none;
+        background-color: #343434;
+      }
 
 			li {
 				display: inline-block;
+        @media #{$rwd-phone} {
+          display: block;
+        }
 				a {
 					display: block;
 					min-width: 5.75rem;
@@ -28,6 +65,10 @@ header {
 					text-align: center;
 					text-decoration: none;
 
+          @media #{$rwd-phone} {
+            height: 2rem;
+          }
+
 					&:hover {
 						&::before { content: '(';}
 						&::after { content: ')';}
@@ -35,6 +76,10 @@ header {
 				}
 			}
 		}
+
+    input#nav-toggle:checked ~ ul#navigation {
+      display: block;
+    }
 	}
 }
 
@@ -55,6 +100,10 @@ footer {
 		margin: 0;
 		background-color: #F5F5F5;
 		color: #A0A0A0;
+
+    @media #{$rwd-phone} {
+      padding: 1rem;
+    }
 
 		h2 {
 			margin: .5rem;
@@ -106,6 +155,10 @@ footer {
 		> .fc-view {
 			padding: 2rem;
 			background-color: rgba(255,255,255, 0.75);
+
+      @media #{$rwd-phone} {
+        padding: 1rem;
+      }
 
 			> table {
 
