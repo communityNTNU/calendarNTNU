@@ -9,7 +9,7 @@ html, body {
 
 header {
 	padding: 5px;
-	height: 1rem;
+	height: 1.5rem;
 	background-color: #343434;
 
   @media #{$rwd-phone} {
@@ -19,7 +19,6 @@ header {
 
 	nav {
 		float: right;
-		display: none;
     @media #{$rwd-phone} {
       display: inline-block;
       text-align: right;
@@ -27,7 +26,10 @@ header {
     }
 
     label {
-      display: inline-block;
+      display: none;
+      @media #{$rwd-phone} {
+        display: inline-block;
+      }
       padding: .25rem;
       height: 1.5rem;
       svg {
@@ -102,7 +104,7 @@ footer {
 		color: #A0A0A0;
 
     @media #{$rwd-phone} {
-      padding: 1rem;
+      padding: 2rem 1rem;
     }
 
 		h2 {
@@ -157,7 +159,7 @@ footer {
 			background-color: rgba(255,255,255, 0.75);
 
       @media #{$rwd-phone} {
-        padding: 1rem;
+        padding: 1rem 1rem 2rem;
       }
 
 			> table {
