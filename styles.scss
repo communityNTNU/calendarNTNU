@@ -152,7 +152,7 @@ footer {
 	}
 
 	> .fc-view-container {
-		background-image: url('/images/bg.jpg');
+		background-image: url('{{ site.baseurl }}/images/bg.jpg');
 
 		> .fc-view {
 			padding: 2rem;
