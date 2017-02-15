@@ -1,8 +1,8 @@
 timezone: Asia/Taipei
 encoding: utf-8
 title: Calendar NTNU
-url: "https://communityNTNU.github.io"
-baseurl: "/calendarNTNU"
+url: "calendar.shida.us"
+baseurl: ""
 markdown: kramdown
 gems:
   - jekyll-coffeescript
